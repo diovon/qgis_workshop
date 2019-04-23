@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +25,82 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+			  <section>
+			    <h1> QGIS Workshop GLT19 </h1>
+			    <p> Ein Workshop für Anfänger </p>
+			    <p> von / mit Andreas Voit </p>
+			  </section>
+			  <section>
+			    <h2> Über mich</h2>
+			    <ul>
+			      <li> Studium Geoinformationstechnik </li>
+			      <li> Langjährige GLT Erfahrung </li>
+			      <li> OSM User </li>
+			      <li> Seit 1/2 Jahren Mitautor der <a href="https://blog.openstreetmap.de/">OSM Wochennotiz</a> </li>
+			      <li> Beruflich Anwender, Tester von propritären GIS Lösungen </li>
+			    </ul>
+			  </section>
+			  <section>
+			    <h2> Was ist QGIS? </h2>
+			    <ul>
+			      <li> Open Source GIS </li>
+			      <li> GIS = Geografisches Informationssystem </li>
+			      <li> Geografisches Informationssystem = Anzeige / Verwaltung / Analyse von geografischen Daten </li>
+			    </ul>
+			  </section>
+			  <section id="vectordata">
+			    <h2>Geografische Daten</h2>
+			    <ul>
+			      <li> Vektordaten </li>
+			      <ul>
+				<li> <b> Vektordaten in entsprechenden Vektormodellen beschreiben raumbezogene Objekte anhand von Punkten. </b> </br>
+				  <small> Quelle: <a href="https://de.m.wikipedia.org/wiki/Vektordaten"> Wikipedia, 20.4.2019 </a> </small>
+				</li>
+				<li> Punkte </li>
+				<li> Linien </li>
+				<li> Polygone </li>
+			      </ul>
+			    </ul>
+			  </section>
+			  <section id="rasterdata">
+			    <h2>Geografische Daten</h2>
+			    <ul>
+			      <li> Rasterdaten </li>
+			      <ul>
+				<li> <b> Rasterdaten sind neben Vektordaten raumbezogene computerlesbare Daten (Geodaten) mit bildhaftem Informationsgehalt. </b> </br>
+				  <small> Quelle: <a href="https://de.m.wikipedia.org/wiki/Rasterdaten"> Wikipedia, 20.4.2019 </a> </small> </li>
+				<li> Bilder wie jpeg, png, tif, ... </li>
+				<li> Beispiel </li>
+			      </ul>
+			    </ul>
+			  </section>
+			  <section>
+			    <h2>andere Daten</h2>
+			    <p> Daten ohne Raumbezug können mit räumlichen Daten verknüpft werden </p>
+			    <p> Bsp.: Liniennetz wird mit Liste von Straßennamen verknüpft = Straßennetz </p>
+			  </section>
+			  <section>
+			    <h2>OGD Daten</h2>
+			    <p> Open Goverment Data = Daten aus der Verwaltung werden öffentlich den Bürgern und Interessierte zur Verfügung gestellt. </p>
+			    <p> Nicht nur räumliche Daten </p>
+			    <p> Link:<a href="https://www.data.gv.at/"> https://www.data.gv.at/ </a> </p>
+			    <p> räumliches Referenzprojekt: <a href="https://www.basemap.at/"> basemap.at </a>
+			    </p>
+			  </section>
+			  <section>
+			    <h2>QGIS</h2>
+			    <ul>
+			      <li> Freies und Open Source GIS </li>
+			      <li> seit Juli 2002 </br>
+				<small> Quelle: <a href="https://de.m.wikipedia.org/wiki/QGIS"> Wikipedia, 20.4.2019 </a> </small></li>
+			      <li> Durch ständige Entwicklung echt gute Alternative zu propritären Lösungen </li>
+			      <li> Einsatz in mehreren deutschen und schweizer Verwaltungen </li>
+			      <li> In Österreich ist Vorarlberg ein großer Unterstützer des Projektes </li>
+			    </ul>
+			  </section>
+			  <section>
+			    <h2>Einführung in die GUI </h2>
+			  </section>
 			</div>
 		</div>
 
@@ -37,11 +111,12 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+			    dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/notes/zoom.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
 				]
 			});
 		</script>

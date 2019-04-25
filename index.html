@@ -102,7 +102,7 @@
 			    <h2>Einführung in die GUI </h2>
 			  </section>
 			  <section>
-			    <h2>Beispiele 1 - Intermodales Verkehrsreferenzsystem Österreich (GIP.at)</h2>
+			    <h2>Beispiele - Intermodales Verkehrsreferenzsystem Österreich (GIP.at)</h2>
 			    <p> <a href="https://www.data.gv.at/katalog/dataset/3fefc838-791d-4dde-975b-a4131a54e7c5">https://www.data.gv.at/katalog/dataset/3fefc838-791d-4dde-975b-a4131a54e7c5</a>
 			    </p>
 			  </section>
@@ -138,7 +138,7 @@
 			    <img src="pics/qgis_karte.png" >
 			  </section>
 			  <section>
-			    <h2>Beispiele 2 - Öffi-Netz STMK</h2>
+			    <h2>Beispiele - Öffi-Netz STMK</h2>
 			    <p> <a href="https://www.data.gv.at/katalog/dataset/053f7976-1d6a-493c-8c6a-3d0f306e9500"> Linien Oeffis STMK </a> </p>
 			    <p> <a href="https://www.data.gv.at/katalog/dataset/3042359b-f241-49fc-bca3-46410b81bcbf"> Haltestellen STMK </a> </p>
 			    <p> <a href="https://www.data.gv.at/katalog/dataset/0d10eb50-38a8-11e2-81c1-0800200c9a66"> Park & Ride-Anlagen STMK </a> </p>
@@ -152,13 +152,85 @@
 			    <p> Erstellung Web Karte mit QGIS2Web-Plugin </p>
 			  </section>
 			  <section>
-			    <h2>Beispiele 3 - OSM Karte digitalisieren</h2>
+			    <h2>Beispiele - OSM Karte digitalisieren</h2>
 			    <p> Laden von OSM Daten in QGIS </p>
 			    <p> Einführung in das Bearbeitungstool </p>
 			    <p> Speichern der Bearbeitung in Spatial Lite Datenbank </p>
 			  </section>
 			  <section>
-			    <h2>Beispiele 4 - Karte von mobiler Feinstaubmessung </h2>
+			    <h2>Beispiele - 3D Karte für Anzeige in WebBrowser </h2>
+			    <p> Hintergrundkarte basemap.at - <a href="https://www.data.gv.at/katalog/dataset/b5de6975-417b-4320-afdb-eb2a9e2a1dbf"> DGM </a>
+			    </p>
+			    <p> Standorte von Flughäfen aus OSM mit Plugin QuickOSM </p>
+			    <p> Erstellung Karte mit Plugin Qgis2threejs </p>
+			  </section>
+			  <section>
+			    <section>
+			      <h2> Flughäfen aus OSM </h2>
+			      <p> Abfrage mit Hilfe von <a href="http://overpass-turbo.eu/"> Overpass Turbo </a> </p>
+			      <p>  </p>
+			      <p> Erstellung Karte mit Plugin Qgis2threejs </p>
+			    </section>			  
+			    <section data-markdown>      
+			      <script type="text/template">
+				## Overpass Turbo Abfrage
+				```
+				area["name"="Österreich"]->.boundaryarea;
+(
+node(area.boundaryarea)["aeroway"="aerodrome"];
+way(area.boundaryarea)["aeroway"="aerodrome"];>;
+relation(area.boundaryarea)["aeroway"="aerodrome"];>>;
+);
+out;
+				```
+			      </script>
+			    </section>
+			    <section>
+			    <h3> QuickOSM </h3>
+			    <img src="pics/airport_quickosm.png" >
+			    </section>
+			    <section>
+			    <h3> Flughäfen als Polygone </h3>
+			    <img src="pics/qgis_airport_polygons.png" >
+			    </section>
+			    <section>
+			    <h3> Zentroid von Polygon berechnen lassen </h3>
+			    <img src="pics/airport_centroid.png" >
+			    </section>
+			    <section>
+			    <h3> Berechnung ...</h3>
+			    <img src="pics/qgis_centroid_tool.png" >
+			    </section>
+			    <section>
+			    <h3> Anzeige von Zentroid in Karte </h3>
+			    <img src="pics/qgis_centroids_on_map.png" >
+			    </section>
+			    <section>
+			    <h3> Anzeige DGM und Flughäfen auf QGIS Karte </h3>
+			    <img src="pics/qgis_dhm_airports.png" >
+			    </section>
+			    <section>
+			    <h3> Öffnen von Qgis2threejs-Tool </h3>
+			    <img src="pics/qgis_auswahl_threejs_tool.png" >
+			    </section>
+			    <section>
+			    <h3> Konfiguration der Ansicht </h3>
+			    <img src="pics/sceen_settings.png" >
+			    </section>
+			    <section>
+			    <h3> Konfiguration der Darstellung der Flughäfen </h3>
+			    <img src="pics/point_settings.png" >
+			    </section>
+			    <section>
+			    <img src="pics/point_properties.png" >
+			    </section>
+			    <section>
+			    <h3> Ergebnis in WebBrowser</h3>
+			    <img src="pics/qgis_3D_Karte_Ergebnis.png" >
+			    </section>
+			  </section>
+			  <section>
+			    <h2>Beispiele - Karte von mobiler Feinstaubmessung </h2>
 			    <p> Hintergrundkarte basemap.at </p>
 			    <p> Messdaten kommen aus CSV-Datei </p>
 			    <p> Erstellung Karte in QGIS </p>
